@@ -10,12 +10,11 @@ https://pypi.python.org/pypi/PyDrive
 
 
 #%% Setup
-
 from pydrive.auth import GoogleAuth
 from pydrive.drive import GoogleDrive
 gauth = GoogleAuth()
-#gauth.LocalWebserverAuth()
-gauth.LoadCredentialsFile('mycreds.txt')
+##gauth.LocalWebserverAuth()
+##gauth.LoadCredentialsFile('mycreds.txt')
 if gauth.credentials is None:
 	gauth.LocalWebserverAuth() # Auth if no credentials
 	gauth.SaveCredentialsFile('mycreds.txt')
